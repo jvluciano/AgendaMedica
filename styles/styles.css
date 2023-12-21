@@ -10,11 +10,10 @@
     --cor-botao-terciario: #4894FF;
     --cor-fundo-cadastro: black;
     --fonte-padrao: 'Montserrat', sans-serif;
-    --tamanho-fonte-padrao: 14px;
-    --tamanho-fonte-informacao: 12px;
-    --tamanho-titulo: 22px;
-    --tamanho-subtitulo: 16px;
-    
+    --tamanho-fonte-padrao: .87rem;
+    --tamanho-fonte-informacao: 0.75rem;
+    --tamanho-titulo: 1.37rem;
+    --tamanho-subtitulo: 1rem;
 }
 
 body{
@@ -51,6 +50,10 @@ body{
 
 .cabecalho__texto{
     color: var(--cor-da-fonte-secundaria);
+}
+
+.apresentacao{
+    margin-bottom: 60px;
 }
 
 .apresentacao__titulo{
