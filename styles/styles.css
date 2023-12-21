@@ -8,6 +8,7 @@
     --cor-botao-card: #FFB050;
     --cor-borda-card: #ECECEC;
     --cor-botao-terciario: #4894FF;
+    --cor-fundo-cadastro: black;
     --fonte-padrao: 'Montserrat', sans-serif;
     --tamanho-fonte-padrao: 14px;
     --tamanho-fonte-informacao: 12px;
@@ -28,7 +29,7 @@ body{
     display: flex;
     align-items: center;
     gap: 1em;
-    margin: 65px 0 22px 16px;
+    margin: 22px 0 22px 16px;
 }
 
 .imagem__perfil{
@@ -150,4 +151,67 @@ body{
     padding: 1em;
     color: var(--cor-do-card);
     font-weight: 500;
+}
+
+.rodape{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container__cadastro{
+    display: none;
+}
+
+.cadastro{
+    display: none;
+}
+
+.container__cadastro:checked~.cadastro__opcao{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.container__cadastro:checked~.body{
+    background: var(--cor-fundo-cadastro);
+    opacity: 0.6;
+}
+
+.cadastro__texto{
+    font-size: var(--tamanho-fonte-informacao);
+    background-color: var(--cor-do-card);
+    border-radius: 23px;
+    padding: 8px 16px;
+}
+
+.rodape__cadastro{
+    display: flex;
+    margin-left: auto;
+}
+
+.rodape__menu{
+    background-color: var(--cor-do-card);
+    border-radius: 12px 12px 0 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape__menu__link{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.rodape__imagem{
+    width: 24px;
+    height: 22px;
+}
+
+.selecionado{
+    color: var(--cor-botao-terciario);
 }
