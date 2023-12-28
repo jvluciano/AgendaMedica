@@ -11,7 +11,7 @@
     --cor-fundo-cadastro: black;
     --fonte-padrao: 'Montserrat', sans-serif;
     --tamanho-fonte-padrao: .87rem;
-    --tamanho-fonte-informacao: 0.75rem;
+    --tamanho-fonte-informacao: .75rem;
     --tamanho-titulo: 1.37rem;
     --tamanho-subtitulo: 1rem;
 }
@@ -170,17 +170,6 @@ body{
     display: none;
 }
 
-.container__cadastro:checked~.cadastro__opcao{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.container__cadastro:checked~.body{
-    background: var(--cor-fundo-cadastro);
-    opacity: 0.6;
-}
-
 .cadastro__texto{
     font-size: var(--tamanho-fonte-informacao);
     background-color: var(--cor-do-card);
@@ -217,4 +206,88 @@ body{
 
 .selecionado{
     color: var(--cor-botao-terciario);
+}
+
+.desktop{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .container__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .desktop{
+        display: block;
+    }
+
+    .container__cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
+
+    .rodape{
+        order: 1;
+        position: relative;
+        background: var(--cor-do-card);
+    }
+
+    main{
+        order: 2;
+    }
+
+    .rodape__menu{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .rodape__cadastro{
+        display: none;
+    }
+
+    .rodape__menu__link{
+        flex-direction: row;
+        padding: 2em 0 0 1.5em;
+    }
+
+    .formulario{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0;
+    }
+
+    .formulario__campo{
+        background: var(--cor-do-card);
+        border-radius: 8px;
+        padding: 0.7em 1.5em;
+        border: 1px solid var(--cor-borda-card);
+    }
+
+    .formulario__campo::placeholder{
+        font-family: var(--fonte-padrao);
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--cor-da-fonte-secundaria);
+    }
+
+    .formulario__botao{
+        background: var(--cor-botao-terciario);
+        border: 1px solid var(--cor-botao-terciario);
+        border-radius: 8px;
+        padding: 1em 3em;
+        color: var(--cor-do-card);
+        font-family: var(--fonte-padrao);
+        font-size: 12px;
+        font-weight: 700;
+    }
+
 }
